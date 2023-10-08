@@ -1,0 +1,122 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #FFC0CB, #87CEFA);
+    color: #333;
+    transition: background-color 0.5s;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 60px 0;
+    background-color: #A9E4FF; /* Pastel blue */
+    border-radius: 20px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s;
+}
+
+header h1, header p {
+    margin: 0;
+    animation: slideInFromLeft 1.5s;
+}
+
+section {
+    margin-top: 40px;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s;
+}
+
+section h2 {
+    text-align: center;
+    animation: slideInFromRight 1.5s;
+}
+
+#skills ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    animation: popIn 1s;
+}
+
+#skills li {
+    padding: 10px 20px;
+    background-color: #A9E4FF; /* Pastel blue */
+    border-radius: 15px;
+    transition: color 0.3s, transform 0.3s; /* Smooth transition for color and scale */
+    cursor: pointer; /* Hand cursor to indicate interactivity */
+}
+
+.skills li:hover {
+    color: #FF69B4; /* Change to a pink color on hover */
+    transform: scale(1.1); /* Increase the size slightly */
+}
+
+.project-card {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #FFF3F8; /* Very light pink */
+    border-radius: 15px;
+    animation: popIn 1s;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input, form textarea, form button {
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #A9E4FF; /* Pastel blue */
+}
+
+form button {
+    background-color: #48c5ff; /* Pastel blue */
+    color: #FFF3F8; /* Very light pink */
+    cursor: pointer;
+    border: none;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes slideInFromLeft {
+    from {transform: translateX(-100%);}
+    to {transform: translateX(0);}
+}
+
+@keyframes slideInFromRight {
+    from {transform: translateX(100%);}
+    to {transform: translateX(0);}
+}
+
+@keyframes popIn {
+    from {transform: scale(0.5); opacity: 0;}
+    to {transform: scale(1); opacity: 1;}
+}
+
+#colorOverlay {
+    position: absolute;
+    pointer-events: none; 
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(ellipse at center, rgba(255, 100, 252, 0.761) 0%, rgba(255, 255, 255, 0) 60%); 
+    transform: translate(-50%, -50%);
+    mix-blend-mode: screen;
+}
+
