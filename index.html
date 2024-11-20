@@ -3,45 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Pokédex</title>
     <link rel="stylesheet" href="styles.css">
-    <title>My Portfolio</title>
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>John Doe</h1>
-            <p>Web Developer & Designer</p>
-        </header>
-        <section id="skills" class="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-            </ul>
-        </section>
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="project-card">
-                <h3>Project 1</h3>
-                <p>Details about the project.</p>
-            </div>
-            <div class="project-card">
-                <h3>Project 2</h3>
-                <p>Details about the project.</p>
-            </div>
-        </section>
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <form>
-                <input type="text" placeholder="Your Name">
-                <input type="email" placeholder="Your Email">
-                <textarea placeholder="Your Message"></textarea>
-                <button type="submit" id="sendBtn">Send</button>
-            </form>
-        </section>
+        <h1>Pokédex</h1>
+        <div class="search">
+            <input type="text" id="pokemonName" placeholder="Enter Pokémon name or ID">
+            <button id="searchButton">Search</button>
+        </div>
+        <div id="pokemonData" class="pokemon-data">
+            <!-- Pokémon information will be displayed here -->
+        </div>
     </div>
-    <div id="colorOverlay"></div>
-    <script src="scripts.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
